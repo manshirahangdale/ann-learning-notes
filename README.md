@@ -2,8 +2,6 @@
 
 This repository contains my learning and practice notebook for Artificial Neural Networks (ANNs) using TensorFlow/Keras.
 
-This is a learning-focused repository, not a production-ready project.
-
 ## Concepts Covered
 - Data preprocessing for neural networks
 - One-hot encoding
@@ -17,15 +15,17 @@ This is a learning-focused repository, not a production-ready project.
 - Model evaluation & visualization
 
 ## Dataset
-Customer Churn dataset (publicly available)
+Customer Churn dataset
 
 ## Files
 - `ANN_Learning_Notes.ipynb` – Main learning notebook
 
 ## Observations
-- Accuracy alone was misleading due to class imbalance.
-- The confusion matrix showed bias toward the majority class.
-- This reinforced the importance of deeper evaluation metrics.
+- Although the model achieved ~79% accuracy, the confusion matrix revealed that it was biased toward predicting the majority class, showing that accuracy alone is not a reliable metric for imbalanced datasets.
+- Implementing feature scaling significantly stabilized training and improved convergence speed of the ANN.
+- Early stopping helped prevent unnecessary training epochs and reduced the risk of overfitting.
+- Dropout regularization slightly reduced training accuracy but improved validation stability, highlighting the trade-off between bias and variance.
+- This exercise clarified how ANN performance is highly sensitive to preprocessing choices such as encoding and scaling.
 
 ## Future Improvements
 - Handle class imbalance
